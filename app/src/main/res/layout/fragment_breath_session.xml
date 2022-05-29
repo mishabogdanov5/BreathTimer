@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="#1A1D1D"
+    >
+
+    <TextView
+        android:id="@+id/tv_session_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="00:00"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/et_breath_in"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="75dp"
+        android:background="@drawable/ic_breath_in"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/tv_session_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_session_time" />
+
+    <TextView
+        android:id="@+id/tv_breath_in"
+        style="@style/et_label_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/antic"
+        android:text="@string/breath_in"
+        app:layout_constraintEnd_toEndOf="@+id/et_breath_in"
+        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintStart_toStartOf="@+id/et_breath_in"
+        app:layout_constraintTop_toTopOf="@+id/et_breath_in" />
+
+    <TextView
+        android:id="@+id/et_breath_pause_in"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/ic_breath_in"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/et_breath_in"
+        app:layout_constraintTop_toTopOf="@+id/et_breath_in" />
+
+    <TextView
+        android:id="@+id/tv_breath_pause_in"
+        style="@style/et_label_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/antic"
+        android:text="@string/breath_pause_in"
+        app:layout_constraintEnd_toEndOf="@+id/et_breath_pause_in"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_breath_pause_in"
+        app:layout_constraintTop_toTopOf="@+id/et_breath_pause_in" />
+
+    <TextView
+        android:id="@+id/et_breath_out"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/ic_breath_in"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/et_breath_pause_in"
+        app:layout_constraintTop_toTopOf="@+id/et_breath_pause_in" />
+
+    <TextView
+        android:id="@+id/tv_breath_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/antic"
+        android:text="@string/breath_out"
+        style="@style/et_label_style"
+        app:layout_constraintEnd_toEndOf="@+id/et_breath_out"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/et_breath_out"
+        app:layout_constraintTop_toTopOf="@+id/et_breath_out" />
+
+    <TextView
+        android:id="@+id/et_breath_pause_out"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/ic_breath_in"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/et_breath_out"
+        app:layout_constraintTop_toTopOf="@+id/et_breath_out" />
+
+    <TextView
+        android:id="@+id/tv_breath_pause_out"
+        style="@style/et_label_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/antic"
+        android:text="@string/breath_pause_out"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/et_breath_pause_out"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_breath_pause_out"
+        app:layout_constraintTop_toTopOf="@+id/et_breath_pause_out" />
+
+
+    <Button
+        android:id="@+id/bt_start_session"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/ic_breath_in"
+        android:text="начать"
+        style = "@style/et_label_style"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintEnd_toEndOf="@+id/et_breath_pause_out"
+        app:layout_constraintStart_toStartOf="@+id/et_breath_in"
+        app:layout_constraintTop_toBottomOf="@+id/tv_breath_pause_in" />
+
+</android.support.constraint.ConstraintLayout>
